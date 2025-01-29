@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:SAPConnection xmi:id="_KKcm0N4UEe-afe7zbKpf4Q" dataPackage="_UeXtsN4UEe-afe7zbKpf4Q" Host="R01VM2QS11" Username="TALENDUSER" Password="enc:system.encryption.key.v1:Dnmqqg+OEpKW4BU5762bbMTJ5stEeqVkaa2PzZX4Qp7QCf4kNGwTrQ==" Client="250" SystemNumber="00" Language="JA" jcoVersion="SAP2">
+    <taggedValue xmi:id="_KKitcN4UEe-afe7zbKpf4Q" tag="adsoConnectionType" value="SAP_JCO"/>
+  </TalendMetadata:SAPConnection>
+  <TalendMetadata:GenericPackage xmi:id="_UeXtsN4UEe-afe7zbKpf4Q" name="SAP_Connect_PoC" dataManager="_KKcm0N4UEe-afe7zbKpf4Q">
+    <ownedElement xsi:type="TalendMetadata:SAPTable" xmi:id="_UeXtsd4UEe-afe7zbKpf4Q" name="T001" id="_T9TA8N4UEe-afe7zbKpf4Q" label="T001" tableType="TABLE" tableSearchType="TRANSPARENT">
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtst4UEe-afe7zbKpf4Q" name="MANDT" comment="クライアント" label="MANDT" length="3" sourceType="STRING" talendType="id_String" key="true" businessName="クライアント">
+        <initialValue xmi:id="_UeXts94UEe-afe7zbKpf4Q"/>
+        <refTable>T000</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXttN4UEe-afe7zbKpf4Q" name="BUKRS" comment="会社コード" label="BUKRS" length="4" sourceType="STRING" talendType="id_String" key="true" businessName="会社コード">
+        <initialValue xmi:id="_UeXttd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXttt4UEe-afe7zbKpf4Q" name="BUTXT" comment="会社コードまたは会社の名称" label="BUTXT" length="25" sourceType="STRING" talendType="id_String" businessName="会社名">
+        <initialValue xmi:id="_UeXtt94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtuN4UEe-afe7zbKpf4Q" name="ORT01" comment="市区町村" label="ORT01" length="25" sourceType="STRING" talendType="id_String" businessName="市区町村">
+        <initialValue xmi:id="_UeXtud4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtut4UEe-afe7zbKpf4Q" name="LAND1" comment="国/地域コード" label="LAND1" length="3" sourceType="STRING" talendType="id_String" businessName="国/地域コード">
+        <initialValue xmi:id="_UeXtu94UEe-afe7zbKpf4Q"/>
+        <refTable>T005</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtvN4UEe-afe7zbKpf4Q" name="WAERS" comment="通貨コード" label="WAERS" length="5" sourceType="STRING" talendType="id_String" businessName="通貨">
+        <initialValue xmi:id="_UeXtvd4UEe-afe7zbKpf4Q"/>
+        <refTable>TCURC</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtvt4UEe-afe7zbKpf4Q" name="SPRAS" comment="言語キー" label="SPRAS" length="1" sourceType="STRING" talendType="id_String" businessName="言語キー">
+        <initialValue xmi:id="_UeXtv94UEe-afe7zbKpf4Q"/>
+        <refTable>T002</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtwN4UEe-afe7zbKpf4Q" name="KTOPL" comment="勘定コード表" label="KTOPL" length="4" sourceType="STRING" talendType="id_String" businessName="勘定コード表">
+        <initialValue xmi:id="_UeXtwd4UEe-afe7zbKpf4Q"/>
+        <refTable>T004</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtwt4UEe-afe7zbKpf4Q" name="WAABW" comment="換算レート誤差率上限(%)" label="WAABW" length="2" sourceType="INTEGER" talendType="id_Integer" businessName="換算レ－ト誤差上限 (%)">
+        <initialValue xmi:id="_UeXtw94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtxN4UEe-afe7zbKpf4Q" name="PERIV" comment="会計年度バリアント" label="PERIV" length="2" sourceType="STRING" talendType="id_String" businessName="会計年度バリアント">
+        <initialValue xmi:id="_UeXtxd4UEe-afe7zbKpf4Q"/>
+        <refTable>T009</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtxt4UEe-afe7zbKpf4Q" name="KOKFI" comment="配分フラグ" label="KOKFI" length="1" sourceType="STRING" talendType="id_String" businessName="会社コード->管理領域">
+        <initialValue xmi:id="_UeXtx94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtyN4UEe-afe7zbKpf4Q" name="RCOMP" comment="会社" label="RCOMP" length="6" sourceType="STRING" talendType="id_String" businessName="会社">
+        <initialValue xmi:id="_UeXtyd4UEe-afe7zbKpf4Q"/>
+        <refTable>T880</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtyt4UEe-afe7zbKpf4Q" name="ADRNR" comment="アドレス" label="ADRNR" length="10" sourceType="STRING" talendType="id_String" businessName="アドレス">
+        <initialValue xmi:id="_UeXty94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtzN4UEe-afe7zbKpf4Q" name="STCEG" comment="消費税登録番号" label="STCEG" length="20" sourceType="STRING" talendType="id_String" businessName="消費税登録番号">
+        <initialValue xmi:id="_UeXtzd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXtzt4UEe-afe7zbKpf4Q" name="FIKRS" comment="財務管理領域" label="FIKRS" length="4" sourceType="STRING" talendType="id_String" businessName="財務管理領域">
+        <initialValue xmi:id="_UeXtz94UEe-afe7zbKpf4Q"/>
+        <refTable>FM01</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt0N4UEe-afe7zbKpf4Q" name="XFMCO" comment="区分: プロジェクト資金管理が活動中か" label="XFMCO" length="1" sourceType="STRING" talendType="id_String" businessName="プロジェクト資金管理が活動中">
+        <initialValue xmi:id="_UeXt0d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt0t4UEe-afe7zbKpf4Q" name="XFMCB" comment="フラグ: 資金予算管理有効" label="XFMCB" length="1" sourceType="STRING" talendType="id_String" businessName="資金予算管理有効">
+        <initialValue xmi:id="_UeXt094UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt1N4UEe-afe7zbKpf4Q" name="XFMCA" comment="予算管理の更新有効化" label="XFMCA" length="1" sourceType="STRING" talendType="id_String" businessName="FM 更新">
+        <initialValue xmi:id="_UeXt1d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt1t4UEe-afe7zbKpf4Q" name="TXJCD" comment="税計算管轄コード - 税管轄コード" label="TXJCD" length="15" sourceType="STRING" talendType="id_String" businessName="税管轄コード">
+        <initialValue xmi:id="_UeXt194UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt2N4UEe-afe7zbKpf4Q" name="FMHRDATE" comment="HR 勘定への予算センタ割当可能開始" label="FMHRDATE" length="8" sourceType="DATE" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;" businessName="HR の予算センタ有効">
+        <initialValue xmi:id="_UeXt2d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt2t4UEe-afe7zbKpf4Q" name="XTEMPLT" comment="会社コードはテンプレート" label="XTEMPLT" length="1" sourceType="STRING" talendType="id_String" businessName="Template">
+        <initialValue xmi:id="_UeXt294UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt3N4UEe-afe7zbKpf4Q" name="TRANSIT_PLANT" comment="輸送プラント" label="TRANSIT_PLANT" length="4" sourceType="STRING" talendType="id_String" businessName="輸送プラント">
+        <initialValue xmi:id="_UeXt3d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt3t4UEe-afe7zbKpf4Q" name="BUVAR" comment="会社コードバリアント (画面)" label="BUVAR" length="1" sourceType="STRING" talendType="id_String" businessName="伝票入力画面バリアント">
+        <initialValue xmi:id="_UeXt394UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt4N4UEe-afe7zbKpf4Q" name="FDBUK" comment="資金管理と予測用会社コード" label="FDBUK" length="4" sourceType="STRING" talendType="id_String" businessName="資金管理会社コード">
+        <initialValue xmi:id="_UeXt4d4UEe-afe7zbKpf4Q"/>
+        <refTable>T001</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt4t4UEe-afe7zbKpf4Q" name="XFDIS" comment="フラグ: 資金管理有効化済" label="XFDIS" length="1" sourceType="STRING" talendType="id_String" businessName="資金管理有効化済">
+        <initialValue xmi:id="_UeXt494UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt5N4UEe-afe7zbKpf4Q" name="XVALV" comment="フラグ:  起算日初期値提案" label="XVALV" length="1" sourceType="STRING" talendType="id_String" businessName="起算日初期値提案">
+        <initialValue xmi:id="_UeXt5d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt5t4UEe-afe7zbKpf4Q" name="XSKFN" comment="フラグ: 割引基準額は正味額" label="XSKFN" length="1" sourceType="STRING" talendType="id_String" businessName="正味割引基準額">
+        <initialValue xmi:id="_UeXt594UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt6N4UEe-afe7zbKpf4Q" name="KKBER" comment="与信管理領域" label="KKBER" length="4" sourceType="STRING" talendType="id_String" businessName="与信管理領域">
+        <initialValue xmi:id="_UeXt6d4UEe-afe7zbKpf4Q"/>
+        <refTable>T014</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt6t4UEe-afe7zbKpf4Q" name="XMWSN" comment="フラグ: 税の基準額は正味割引額" label="XMWSN" length="1" sourceType="STRING" talendType="id_String" businessName="正味課税基準額">
+        <initialValue xmi:id="_UeXt694UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt7N4UEe-afe7zbKpf4Q" name="MREGL" comment="勘定コードへのモデル勘定コードコピールール" label="MREGL" length="4" sourceType="STRING" talendType="id_String" businessName="モデル勘定ルール">
+        <initialValue xmi:id="_UeXt7d4UEe-afe7zbKpf4Q"/>
+        <refTable>T004R</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt7t4UEe-afe7zbKpf4Q" name="XGSBE" comment="フラグ: 事業領域別の財務諸表の作成要" label="XGSBE" length="1" sourceType="STRING" talendType="id_String" businessName="事業領域別の財務諸表">
+        <initialValue xmi:id="_UeXt794UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt8N4UEe-afe7zbKpf4Q" name="XGJRV" comment="フラグ: 会計年度提案" label="XGJRV" length="1" sourceType="STRING" talendType="id_String" businessName="会計年度提案">
+        <initialValue xmi:id="_UeXt8d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt8t4UEe-afe7zbKpf4Q" name="XKDFT" comment="フラグ: 換算差損益の換算転記" label="XKDFT" length="1" sourceType="STRING" talendType="id_String" businessName="換算転記">
+        <initialValue xmi:id="_UeXt894UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt9N4UEe-afe7zbKpf4Q" name="XPROD" comment="フラグ: 本稼動会社コード" label="XPROD" length="1" sourceType="STRING" talendType="id_String" businessName="本稼動会社コード">
+        <initialValue xmi:id="_UeXt9d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt9t4UEe-afe7zbKpf4Q" name="XEINK" comment="フラグ: 仕入勘定処理有効" label="XEINK" length="1" sourceType="STRING" talendType="id_String" businessName="仕入勘定処理">
+        <initialValue xmi:id="_UeXt994UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt-N4UEe-afe7zbKpf4Q" name="XJVAA" comment="フラグ: JV 会計有効" label="XJVAA" length="1" sourceType="STRING" talendType="id_String" businessName="JV 会計有効">
+        <initialValue xmi:id="_UeXt-d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt-t4UEe-afe7zbKpf4Q" name="XVVWA" comment="フラグ: 財務資産管理機能使用" label="XVVWA" length="1" sourceType="STRING" talendType="id_String" businessName="財務資産管理使用">
+        <initialValue xmi:id="_UeXt-94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt_N4UEe-afe7zbKpf4Q" name="XSLTA" comment="フラグ: 換算レート差損益なし (国内通貨決済時)" label="XSLTA" length="1" sourceType="STRING" talendType="id_String" businessName="換算レート差損益 (国内通貨決済時)">
+        <initialValue xmi:id="_UeXt_d4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXt_t4UEe-afe7zbKpf4Q" name="XFDMM" comment="フラグ: 資金管理/予測での MM 更新を有効化しますか?" label="XFDMM" length="1" sourceType="STRING" talendType="id_String" businessName="CMF での MM 更新">
+        <initialValue xmi:id="_UeXt_94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuAN4UEe-afe7zbKpf4Q" name="XFDSD" comment="フラグ : 資金管理/予測での販売管理更新を有効化しますか?" label="XFDSD" length="1" sourceType="STRING" talendType="id_String" businessName="CMF での SD 更新">
+        <initialValue xmi:id="_UeXuAd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuAt4UEe-afe7zbKpf4Q" name="XEXTB" comment="フラグ: 会社コードは別システムにあります" label="XEXTB" length="1" sourceType="STRING" talendType="id_String" businessName="外部会社コード">
+        <initialValue xmi:id="_UeXuA94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuBN4UEe-afe7zbKpf4Q" name="EBUKR" comment="会社コードのオリジナルキー" label="EBUKR" length="4" sourceType="STRING" talendType="id_String" businessName="オリジナルキー">
+        <initialValue xmi:id="_UeXuBd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuBt4UEe-afe7zbKpf4Q" name="KTOP2" comment="代替勘定コード表" label="KTOP2" length="4" sourceType="STRING" talendType="id_String" businessName="代替勘定コード表">
+        <initialValue xmi:id="_UeXuB94UEe-afe7zbKpf4Q"/>
+        <refTable>T004</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuCN4UEe-afe7zbKpf4Q" name="UMKRS" comment="消費税グループ" label="UMKRS" length="4" sourceType="STRING" talendType="id_String" businessName="消費税グループ">
+        <initialValue xmi:id="_UeXuCd4UEe-afe7zbKpf4Q"/>
+        <refTable>T007F</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuCt4UEe-afe7zbKpf4Q" name="BUKRS_GLOB" comment="グローバル会社コード名" label="BUKRS_GLOB" length="6" sourceType="STRING" talendType="id_String" businessName="グローバル会社">
+        <initialValue xmi:id="_UeXuC94UEe-afe7zbKpf4Q"/>
+        <refTable>T001O</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuDN4UEe-afe7zbKpf4Q" name="FSTVA" comment="項目ステ－タスバリアント" label="FSTVA" length="4" sourceType="STRING" talendType="id_String" businessName="項目ステータス Var.">
+        <initialValue xmi:id="_UeXuDd4UEe-afe7zbKpf4Q"/>
+        <refTable>T004V</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuDt4UEe-afe7zbKpf4Q" name="OPVAR" comment="会計期間バリアント" label="OPVAR" length="4" sourceType="STRING" talendType="id_String" businessName="会計期間バリアント">
+        <initialValue xmi:id="_UeXuD94UEe-afe7zbKpf4Q"/>
+        <refTable>T010O</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuEN4UEe-afe7zbKpf4Q" name="XCOVR" comment="フラグ: ヘッジ依頼使用" label="XCOVR" length="1" sourceType="STRING" talendType="id_String" businessName="ヘッジ依頼使用">
+        <initialValue xmi:id="_UeXuEd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuEt4UEe-afe7zbKpf4Q" name="TXKRS" comment="税明細の外貨換算" label="TXKRS" length="1" sourceType="STRING" talendType="id_String" businessName="税明細外貨換算">
+        <initialValue xmi:id="_UeXuE94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuFN4UEe-afe7zbKpf4Q" name="WFVAR" comment="ワークフローバリアント" label="WFVAR" length="4" sourceType="STRING" talendType="id_String" businessName="WF バリアント">
+        <initialValue xmi:id="_UeXuFd4UEe-afe7zbKpf4Q"/>
+        <refTable>VBWF01</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuFt4UEe-afe7zbKpf4Q" name="XBBBF" comment="在庫管理での G/L 勘定権限チェック" label="XBBBF" length="1" sourceType="STRING" talendType="id_String" businessName="在庫管理">
+        <initialValue xmi:id="_UeXuF94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuGN4UEe-afe7zbKpf4Q" name="XBBBE" comment="発注/分納契約の勘定コード権限確認" label="XBBBE" length="1" sourceType="STRING" talendType="id_String" businessName="購買発注/分納契約">
+        <initialValue xmi:id="_UeXuGd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuGt4UEe-afe7zbKpf4Q" name="XBBBA" comment="購買依頼の勘定コード権限チェック" label="XBBBA" length="1" sourceType="STRING" talendType="id_String" businessName="購買依頼">
+        <initialValue xmi:id="_UeXuG94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuHN4UEe-afe7zbKpf4Q" name="XBBKO" comment="基本契約の勘定コード権限チェック" label="XBBKO" length="1" sourceType="STRING" talendType="id_String" businessName="基本契約">
+        <initialValue xmi:id="_UeXuHd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuHt4UEe-afe7zbKpf4Q" name="XSTDT" comment="フラグ: 税決定基準の伝票日付" label="XSTDT" length="1" sourceType="STRING" talendType="id_String" businessName="伝票日付あり税決定">
+        <initialValue xmi:id="_UeXuH94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuIN4UEe-afe7zbKpf4Q" name="MWSKV" comment="非課税取引の仮払消費税コード" label="MWSKV" length="2" sourceType="STRING" talendType="id_String" businessName="仮払消費税コード">
+        <initialValue xmi:id="_UeXuId4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuIt4UEe-afe7zbKpf4Q" name="MWSKA" comment="非課税取引の仮受消費税コード" label="MWSKA" length="2" sourceType="STRING" talendType="id_String" businessName="仮受消費税コード">
+        <initialValue xmi:id="_UeXuI94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuJN4UEe-afe7zbKpf4Q" name="IMPDA" comment="貿易: MM 購買発注の輸入データ管理" label="IMPDA" length="1" sourceType="STRING" talendType="id_String" businessName="購買発注の輸入データ">
+        <initialValue xmi:id="_UeXuJd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuJt4UEe-afe7zbKpf4Q" name="XNEGP" comment="区分: マイナス転記可" label="XNEGP" length="1" sourceType="STRING" talendType="id_String" businessName="マイナス転記可">
+        <initialValue xmi:id="_UeXuJ94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuKN4UEe-afe7zbKpf4Q" name="XKKBI" comment="フラグ: 与信管理データの上書き可能" label="XKKBI" length="1" sourceType="STRING" talendType="id_String" businessName="与信管理データの上書き可">
+        <initialValue xmi:id="_UeXuKd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuKt4UEe-afe7zbKpf4Q" name="WT_NEWWT" comment="フラグ: 拡張源泉徴収税の有効化" label="WT_NEWWT" length="1" sourceType="STRING" talendType="id_String" businessName="拡張源泉徴収税の有効化">
+        <initialValue xmi:id="_UeXuK94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuLN4UEe-afe7zbKpf4Q" name="PP_PDATE" comment="転記日付設定処理" label="PP_PDATE" length="1" sourceType="STRING" talendType="id_String" businessName="未転記日付">
+        <initialValue xmi:id="_UeXuLd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuLt4UEe-afe7zbKpf4Q" name="INFMT" comment="インフレーションメソッド" label="INFMT" length="4" sourceType="STRING" talendType="id_String" businessName="Inflat. メソッド">
+        <initialValue xmi:id="_UeXuL94UEe-afe7zbKpf4Q"/>
+        <refTable>J_1AINFMET</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuMN4UEe-afe7zbKpf4Q" name="FSTVARE" comment="支出負担行為伺項目ステータスバリアント" label="FSTVARE" length="4" sourceType="STRING" talendType="id_String" businessName="項目ステータスVaria.">
+        <initialValue xmi:id="_UeXuMd4UEe-afe7zbKpf4Q"/>
+        <refTable>TREV</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuMt4UEe-afe7zbKpf4Q" name="KOPIM" comment="貿易: 輸入データコピー管理 - GR" label="KOPIM" length="1" sourceType="STRING" talendType="id_String" businessName="コピー管理 GR">
+        <initialValue xmi:id="_UeXuM94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuNN4UEe-afe7zbKpf4Q" name="DKWEG" comment="貿易: 輸入データの画面制御 - MM 入庫" label="DKWEG" length="1" sourceType="STRING" talendType="id_String" businessName="輸入データ GR">
+        <initialValue xmi:id="_UeXuNd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuNt4UEe-afe7zbKpf4Q" name="OFFSACCT" comment="相手勘定コード設定方法" label="OFFSACCT" length="1" sourceType="INTEGER" talendType="id_Integer" businessName="相手勘定コード設定法">
+        <initialValue xmi:id="_UeXuN94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuON4UEe-afe7zbKpf4Q" name="BAPOVAR" comment="事業領域財務諸表の追加設定バリアント" label="BAPOVAR" length="2" sourceType="STRING" talendType="id_String" businessName="事業領域バリアント">
+        <initialValue xmi:id="_UeXuOd4UEe-afe7zbKpf4Q"/>
+        <refTable>TGSB_CUS</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuOt4UEe-afe7zbKpf4Q" name="XCOS" comment="売上原価計算ステータス" label="XCOS" length="1" sourceType="STRING" talendType="id_String" businessName="売上原価計算有効化">
+        <initialValue xmi:id="_UeXuO94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuPN4UEe-afe7zbKpf4Q" name="XCESSION" comment="ファクタリング有効" label="XCESSION" length="1" sourceType="STRING" talendType="id_String" businessName="ファクタリング有効">
+        <initialValue xmi:id="_UeXuPd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuPt4UEe-afe7zbKpf4Q" name="XSPLT" comment="金額分割可能" label="XSPLT" length="1" sourceType="STRING" talendType="id_String" businessName="金額分割可能">
+        <initialValue xmi:id="_UeXuP94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuQN4UEe-afe7zbKpf4Q" name="SURCCM" comment="Surcharge Calculation Method" label="SURCCM" length="1" sourceType="STRING" talendType="id_String" businessName="Surcharge Method">
+        <initialValue xmi:id="_UeXuQd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuQt4UEe-afe7zbKpf4Q" name="DTPROV" comment="Document Type for Provisions for Taxes on Services Received" label="DTPROV" length="2" sourceType="STRING" talendType="id_String" businessName="Document Type for Provisions for Taxes">
+        <initialValue xmi:id="_UeXuQ94UEe-afe7zbKpf4Q"/>
+        <refTable>T003</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuRN4UEe-afe7zbKpf4Q" name="DTAMTC" comment="Document Type for Journal Voucher (Amount Correction)" label="DTAMTC" length="2" sourceType="STRING" talendType="id_String" businessName="Document Type for JV (Amount Correction)">
+        <initialValue xmi:id="_UeXuRd4UEe-afe7zbKpf4Q"/>
+        <refTable>T003</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuRt4UEe-afe7zbKpf4Q" name="DTTAXC" comment="Document Type for Journal Voucher (Tax Code Correction)" label="DTTAXC" length="2" sourceType="STRING" talendType="id_String" businessName="Document Type for JV (Tax Code)">
+        <initialValue xmi:id="_UeXuR94UEe-afe7zbKpf4Q"/>
+        <refTable>T003</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuSN4UEe-afe7zbKpf4Q" name="DTTDSP" comment="Document Type for Remittance Challans" label="DTTDSP" length="2" sourceType="STRING" talendType="id_String" businessName="Remittance Challan Document Type">
+        <initialValue xmi:id="_UeXuSd4UEe-afe7zbKpf4Q"/>
+        <refTable>T003</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuSt4UEe-afe7zbKpf4Q" name="DTAXR" comment="繰延税ルール" label="DTAXR" length="4" sourceType="STRING" talendType="id_String" businessName="繰延税ルール">
+        <initialValue xmi:id="_UeXuS94UEe-afe7zbKpf4Q"/>
+        <refTable>T007DT</refTable>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuTN4UEe-afe7zbKpf4Q" name="XVATDATE" comment="伝票の税レポート日付有効" label="XVATDATE" length="1" sourceType="STRING" talendType="id_String" businessName="税レポート日付有効">
+        <initialValue xmi:id="_UeXuTd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuTt4UEe-afe7zbKpf4Q" name="PST_PER_VAR" comment="会社コード/元帳の会計期間バリアント管理" label="PST_PER_VAR" length="1" sourceType="STRING" talendType="id_String" businessName="会社コード/元帳の会計期間管理">
+        <initialValue xmi:id="_UeXuT94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuUN4UEe-afe7zbKpf4Q" name="XBBSC" comment="ショッピングカードの G/L 勘定権限チェック" label="XBBSC" length="1" sourceType="STRING" talendType="id_String" businessName="ショッピングカート">
+        <initialValue xmi:id="_UeXuUd4UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuUt4UEe-afe7zbKpf4Q" name="F_OBSOLETE" comment="入力ヘルプのエントリ非表示" label="F_OBSOLETE" length="1" sourceType="STRING" talendType="id_String" businessName="入力ヘルプのエントリ非表示">
+        <initialValue xmi:id="_UeXuU94UEe-afe7zbKpf4Q"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:SAPTableField" xmi:id="_UeXuVN4UEe-afe7zbKpf4Q" name="FM_DERIVE_ACC" comment="予算管理での勘定割当誘導有効化" label="FM_DERIVE_ACC" length="1" sourceType="STRING" talendType="id_String" businessName="勘定割当誘導有効化">
+        <initialValue xmi:id="_UeXuVd4UEe-afe7zbKpf4Q"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>
