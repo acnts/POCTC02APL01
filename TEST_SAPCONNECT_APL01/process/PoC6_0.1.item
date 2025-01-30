@@ -153,7 +153,10 @@
     <elementParameter field="CHECK" name="TRIM_SPACES" value="true"/>
     <elementParameter field="CHECK" name="USE_CUSTOM_MAXLENGTH_FOR_VARIABLE_LENGTH" value="false"/>
     <elementParameter field="TEXT" name="CUSTOM_MAXLENGTH_FOR_VARIABLE_LENGTH" value="100" show="false"/>
-    <elementParameter field="TABLE" name="SAP_PROPERTIES"/>
+    <elementParameter field="TABLE" name="SAP_PROPERTIES">
+      <elementValue elementRef="PROPERTY" value="&quot;api.use_z_talend_read_table&quot;" id="0"/>
+      <elementValue elementRef="VALUE" value="&quot;true&quot;" id="1"/>
+    </elementParameter>
     <elementParameter field="TABLE" name="KAFKA_PROPERTIES" show="false"/>
     <elementParameter field="TEXT" name="FETCH_SIZE" value="10000" show="false"/>
     <elementParameter field="CHECK" name="EXTRACT_REMOTE_PATH" value="false" show="false"/>
@@ -920,7 +923,7 @@
       <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="aaa">
         <mapperTableEntries name="BUKRS" expression="row2.BUKRS " type="id_String" nullable="true"/>
