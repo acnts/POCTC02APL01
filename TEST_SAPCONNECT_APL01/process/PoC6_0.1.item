@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
@@ -99,18 +99,8 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
   </parameters>
-  <node componentName="tSAPTableInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="120" posY="120">
+  <node componentName="tSAPTableInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSAPTableInput_1" show="false"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" value="tSAPTableInput" show="false"/>
-    <elementParameter field="TEXT" name="VERSION" value="0.101 (ALPHA)" show="false"/>
-    <elementParameter field="TEXT" name="FAMILY" value="Business/SAP" show="false"/>
-    <elementParameter field="CHECK" name="START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" value="true" show="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" value="true" show="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" value="false" show="false"/>
-    <elementParameter field="TEXT" name="HELP" value="org.talend.help.tSAPTableInput" show="false"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" value="" show="false"/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" value="C:\Talend\Talend-Studio-20240527_1700-V8.0.1\user3.home\studio\configuration\lib\java" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_KKV5IN4UEe-afe7zbKpf4Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -257,11 +247,11 @@
       <column comment="予算管理での勘定割当誘導有効化" key="false" length="1" name="FM_DERIVE_ACC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="120">
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_1" show="false"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/Talend-Studio-20240527_1700-V8.0.1/workspace/PoC6/out.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/Talend-Studio-20240527_1700-V8.0.1/workspace/PoC6/out1.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
@@ -281,8 +271,8 @@
     <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
     <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
     <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
     <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
     <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
@@ -372,12 +362,719 @@
       <column comment="予算管理での勘定割当誘導有効化" key="false" length="1" name="FM_DERIVE_ACC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_KKV5IN4UEe-afe7zbKpf4Q - T001" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="DYNAMIC" value="" show="false"/>
+    <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/Talend-Studio-20240527_1700-V8.0.1/workspace/PoC6/out1.csv&quot;"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="REMOVE_EMPTY_ROW" value="true"/>
+    <elementParameter field="CHECK" name="UNCOMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="DIRECTORY" name="TEMP_DIR" value="&quot;C:/Talend/Talend-Studio-20240527_1700-V8.0.1/user1.home/studio/workspace&quot;" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="RANDOM" value="false"/>
+    <elementParameter field="TEXT" name="NB_RANDOM" value="10" show="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="MANDT" id="0"/>
+      <elementValue elementRef="TRIM" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUKRS" id="2"/>
+      <elementValue elementRef="TRIM" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUTXT" id="4"/>
+      <elementValue elementRef="TRIM" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORT01" id="6"/>
+      <elementValue elementRef="TRIM" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAND1" id="8"/>
+      <elementValue elementRef="TRIM" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WAERS" id="10"/>
+      <elementValue elementRef="TRIM" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SPRAS" id="12"/>
+      <elementValue elementRef="TRIM" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KTOPL" id="14"/>
+      <elementValue elementRef="TRIM" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WAABW" id="16"/>
+      <elementValue elementRef="TRIM" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PERIV" id="18"/>
+      <elementValue elementRef="TRIM" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KOKFI" id="20"/>
+      <elementValue elementRef="TRIM" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RCOMP" id="22"/>
+      <elementValue elementRef="TRIM" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADRNR" id="24"/>
+      <elementValue elementRef="TRIM" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STCEG" id="26"/>
+      <elementValue elementRef="TRIM" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FIKRS" id="28"/>
+      <elementValue elementRef="TRIM" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCO" id="30"/>
+      <elementValue elementRef="TRIM" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCB" id="32"/>
+      <elementValue elementRef="TRIM" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCA" id="34"/>
+      <elementValue elementRef="TRIM" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TXJCD" id="36"/>
+      <elementValue elementRef="TRIM" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FMHRDATE" id="38"/>
+      <elementValue elementRef="TRIM" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XTEMPLT" id="40"/>
+      <elementValue elementRef="TRIM" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSIT_PLANT" id="42"/>
+      <elementValue elementRef="TRIM" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUVAR" id="44"/>
+      <elementValue elementRef="TRIM" value="false" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FDBUK" id="46"/>
+      <elementValue elementRef="TRIM" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDIS" id="48"/>
+      <elementValue elementRef="TRIM" value="false" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVALV" id="50"/>
+      <elementValue elementRef="TRIM" value="false" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSKFN" id="52"/>
+      <elementValue elementRef="TRIM" value="false" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KKBER" id="54"/>
+      <elementValue elementRef="TRIM" value="false" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XMWSN" id="56"/>
+      <elementValue elementRef="TRIM" value="false" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MREGL" id="58"/>
+      <elementValue elementRef="TRIM" value="false" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XGSBE" id="60"/>
+      <elementValue elementRef="TRIM" value="false" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XGJRV" id="62"/>
+      <elementValue elementRef="TRIM" value="false" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XKDFT" id="64"/>
+      <elementValue elementRef="TRIM" value="false" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XPROD" id="66"/>
+      <elementValue elementRef="TRIM" value="false" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XEINK" id="68"/>
+      <elementValue elementRef="TRIM" value="false" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XJVAA" id="70"/>
+      <elementValue elementRef="TRIM" value="false" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVVWA" id="72"/>
+      <elementValue elementRef="TRIM" value="false" id="73"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSLTA" id="74"/>
+      <elementValue elementRef="TRIM" value="false" id="75"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDMM" id="76"/>
+      <elementValue elementRef="TRIM" value="false" id="77"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDSD" id="78"/>
+      <elementValue elementRef="TRIM" value="false" id="79"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XEXTB" id="80"/>
+      <elementValue elementRef="TRIM" value="false" id="81"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EBUKR" id="82"/>
+      <elementValue elementRef="TRIM" value="false" id="83"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KTOP2" id="84"/>
+      <elementValue elementRef="TRIM" value="false" id="85"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UMKRS" id="86"/>
+      <elementValue elementRef="TRIM" value="false" id="87"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUKRS_GLOB" id="88"/>
+      <elementValue elementRef="TRIM" value="false" id="89"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FSTVA" id="90"/>
+      <elementValue elementRef="TRIM" value="false" id="91"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OPVAR" id="92"/>
+      <elementValue elementRef="TRIM" value="false" id="93"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCOVR" id="94"/>
+      <elementValue elementRef="TRIM" value="false" id="95"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TXKRS" id="96"/>
+      <elementValue elementRef="TRIM" value="false" id="97"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WFVAR" id="98"/>
+      <elementValue elementRef="TRIM" value="false" id="99"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBF" id="100"/>
+      <elementValue elementRef="TRIM" value="false" id="101"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBE" id="102"/>
+      <elementValue elementRef="TRIM" value="false" id="103"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBA" id="104"/>
+      <elementValue elementRef="TRIM" value="false" id="105"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBKO" id="106"/>
+      <elementValue elementRef="TRIM" value="false" id="107"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSTDT" id="108"/>
+      <elementValue elementRef="TRIM" value="false" id="109"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MWSKV" id="110"/>
+      <elementValue elementRef="TRIM" value="false" id="111"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MWSKA" id="112"/>
+      <elementValue elementRef="TRIM" value="false" id="113"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IMPDA" id="114"/>
+      <elementValue elementRef="TRIM" value="false" id="115"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XNEGP" id="116"/>
+      <elementValue elementRef="TRIM" value="false" id="117"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XKKBI" id="118"/>
+      <elementValue elementRef="TRIM" value="false" id="119"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WT_NEWWT" id="120"/>
+      <elementValue elementRef="TRIM" value="false" id="121"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PP_PDATE" id="122"/>
+      <elementValue elementRef="TRIM" value="false" id="123"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INFMT" id="124"/>
+      <elementValue elementRef="TRIM" value="false" id="125"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FSTVARE" id="126"/>
+      <elementValue elementRef="TRIM" value="false" id="127"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KOPIM" id="128"/>
+      <elementValue elementRef="TRIM" value="false" id="129"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DKWEG" id="130"/>
+      <elementValue elementRef="TRIM" value="false" id="131"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OFFSACCT" id="132"/>
+      <elementValue elementRef="TRIM" value="false" id="133"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BAPOVAR" id="134"/>
+      <elementValue elementRef="TRIM" value="false" id="135"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCOS" id="136"/>
+      <elementValue elementRef="TRIM" value="false" id="137"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCESSION" id="138"/>
+      <elementValue elementRef="TRIM" value="false" id="139"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSPLT" id="140"/>
+      <elementValue elementRef="TRIM" value="false" id="141"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURCCM" id="142"/>
+      <elementValue elementRef="TRIM" value="false" id="143"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTPROV" id="144"/>
+      <elementValue elementRef="TRIM" value="false" id="145"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTAMTC" id="146"/>
+      <elementValue elementRef="TRIM" value="false" id="147"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTTAXC" id="148"/>
+      <elementValue elementRef="TRIM" value="false" id="149"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTTDSP" id="150"/>
+      <elementValue elementRef="TRIM" value="false" id="151"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTAXR" id="152"/>
+      <elementValue elementRef="TRIM" value="false" id="153"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVATDATE" id="154"/>
+      <elementValue elementRef="TRIM" value="false" id="155"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PST_PER_VAR" id="156"/>
+      <elementValue elementRef="TRIM" value="false" id="157"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBSC" id="158"/>
+      <elementValue elementRef="TRIM" value="false" id="159"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_OBSOLETE" id="160"/>
+      <elementValue elementRef="TRIM" value="false" id="161"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FM_DERIVE_ACC" id="162"/>
+      <elementValue elementRef="TRIM" value="false" id="163"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="SPLITRECORD" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DECODE" value="false"/>
+    <elementParameter field="TABLE" name="DECODE_COLS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="MANDT" id="0"/>
+      <elementValue elementRef="DECODE" value="false" id="1"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUKRS" id="2"/>
+      <elementValue elementRef="DECODE" value="false" id="3"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUTXT" id="4"/>
+      <elementValue elementRef="DECODE" value="false" id="5"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ORT01" id="6"/>
+      <elementValue elementRef="DECODE" value="false" id="7"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAND1" id="8"/>
+      <elementValue elementRef="DECODE" value="false" id="9"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WAERS" id="10"/>
+      <elementValue elementRef="DECODE" value="false" id="11"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SPRAS" id="12"/>
+      <elementValue elementRef="DECODE" value="false" id="13"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KTOPL" id="14"/>
+      <elementValue elementRef="DECODE" value="false" id="15"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WAABW" id="16"/>
+      <elementValue elementRef="DECODE" value="false" id="17"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PERIV" id="18"/>
+      <elementValue elementRef="DECODE" value="false" id="19"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KOKFI" id="20"/>
+      <elementValue elementRef="DECODE" value="false" id="21"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="RCOMP" id="22"/>
+      <elementValue elementRef="DECODE" value="false" id="23"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ADRNR" id="24"/>
+      <elementValue elementRef="DECODE" value="false" id="25"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="STCEG" id="26"/>
+      <elementValue elementRef="DECODE" value="false" id="27"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FIKRS" id="28"/>
+      <elementValue elementRef="DECODE" value="false" id="29"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCO" id="30"/>
+      <elementValue elementRef="DECODE" value="false" id="31"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCB" id="32"/>
+      <elementValue elementRef="DECODE" value="false" id="33"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFMCA" id="34"/>
+      <elementValue elementRef="DECODE" value="false" id="35"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TXJCD" id="36"/>
+      <elementValue elementRef="DECODE" value="false" id="37"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FMHRDATE" id="38"/>
+      <elementValue elementRef="DECODE" value="false" id="39"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XTEMPLT" id="40"/>
+      <elementValue elementRef="DECODE" value="false" id="41"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TRANSIT_PLANT" id="42"/>
+      <elementValue elementRef="DECODE" value="false" id="43"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUVAR" id="44"/>
+      <elementValue elementRef="DECODE" value="false" id="45"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FDBUK" id="46"/>
+      <elementValue elementRef="DECODE" value="false" id="47"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDIS" id="48"/>
+      <elementValue elementRef="DECODE" value="false" id="49"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVALV" id="50"/>
+      <elementValue elementRef="DECODE" value="false" id="51"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSKFN" id="52"/>
+      <elementValue elementRef="DECODE" value="false" id="53"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KKBER" id="54"/>
+      <elementValue elementRef="DECODE" value="false" id="55"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XMWSN" id="56"/>
+      <elementValue elementRef="DECODE" value="false" id="57"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MREGL" id="58"/>
+      <elementValue elementRef="DECODE" value="false" id="59"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XGSBE" id="60"/>
+      <elementValue elementRef="DECODE" value="false" id="61"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XGJRV" id="62"/>
+      <elementValue elementRef="DECODE" value="false" id="63"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XKDFT" id="64"/>
+      <elementValue elementRef="DECODE" value="false" id="65"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XPROD" id="66"/>
+      <elementValue elementRef="DECODE" value="false" id="67"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XEINK" id="68"/>
+      <elementValue elementRef="DECODE" value="false" id="69"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XJVAA" id="70"/>
+      <elementValue elementRef="DECODE" value="false" id="71"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVVWA" id="72"/>
+      <elementValue elementRef="DECODE" value="false" id="73"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSLTA" id="74"/>
+      <elementValue elementRef="DECODE" value="false" id="75"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDMM" id="76"/>
+      <elementValue elementRef="DECODE" value="false" id="77"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XFDSD" id="78"/>
+      <elementValue elementRef="DECODE" value="false" id="79"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XEXTB" id="80"/>
+      <elementValue elementRef="DECODE" value="false" id="81"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EBUKR" id="82"/>
+      <elementValue elementRef="DECODE" value="false" id="83"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KTOP2" id="84"/>
+      <elementValue elementRef="DECODE" value="false" id="85"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UMKRS" id="86"/>
+      <elementValue elementRef="DECODE" value="false" id="87"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BUKRS_GLOB" id="88"/>
+      <elementValue elementRef="DECODE" value="false" id="89"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FSTVA" id="90"/>
+      <elementValue elementRef="DECODE" value="false" id="91"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OPVAR" id="92"/>
+      <elementValue elementRef="DECODE" value="false" id="93"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCOVR" id="94"/>
+      <elementValue elementRef="DECODE" value="false" id="95"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="TXKRS" id="96"/>
+      <elementValue elementRef="DECODE" value="false" id="97"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WFVAR" id="98"/>
+      <elementValue elementRef="DECODE" value="false" id="99"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBF" id="100"/>
+      <elementValue elementRef="DECODE" value="false" id="101"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBE" id="102"/>
+      <elementValue elementRef="DECODE" value="false" id="103"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBBA" id="104"/>
+      <elementValue elementRef="DECODE" value="false" id="105"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBKO" id="106"/>
+      <elementValue elementRef="DECODE" value="false" id="107"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSTDT" id="108"/>
+      <elementValue elementRef="DECODE" value="false" id="109"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MWSKV" id="110"/>
+      <elementValue elementRef="DECODE" value="false" id="111"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="MWSKA" id="112"/>
+      <elementValue elementRef="DECODE" value="false" id="113"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="IMPDA" id="114"/>
+      <elementValue elementRef="DECODE" value="false" id="115"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XNEGP" id="116"/>
+      <elementValue elementRef="DECODE" value="false" id="117"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XKKBI" id="118"/>
+      <elementValue elementRef="DECODE" value="false" id="119"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="WT_NEWWT" id="120"/>
+      <elementValue elementRef="DECODE" value="false" id="121"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PP_PDATE" id="122"/>
+      <elementValue elementRef="DECODE" value="false" id="123"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="INFMT" id="124"/>
+      <elementValue elementRef="DECODE" value="false" id="125"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FSTVARE" id="126"/>
+      <elementValue elementRef="DECODE" value="false" id="127"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="KOPIM" id="128"/>
+      <elementValue elementRef="DECODE" value="false" id="129"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DKWEG" id="130"/>
+      <elementValue elementRef="DECODE" value="false" id="131"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="OFFSACCT" id="132"/>
+      <elementValue elementRef="DECODE" value="false" id="133"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="BAPOVAR" id="134"/>
+      <elementValue elementRef="DECODE" value="false" id="135"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCOS" id="136"/>
+      <elementValue elementRef="DECODE" value="false" id="137"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XCESSION" id="138"/>
+      <elementValue elementRef="DECODE" value="false" id="139"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XSPLT" id="140"/>
+      <elementValue elementRef="DECODE" value="false" id="141"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="SURCCM" id="142"/>
+      <elementValue elementRef="DECODE" value="false" id="143"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTPROV" id="144"/>
+      <elementValue elementRef="DECODE" value="false" id="145"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTAMTC" id="146"/>
+      <elementValue elementRef="DECODE" value="false" id="147"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTTAXC" id="148"/>
+      <elementValue elementRef="DECODE" value="false" id="149"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTTDSP" id="150"/>
+      <elementValue elementRef="DECODE" value="false" id="151"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DTAXR" id="152"/>
+      <elementValue elementRef="DECODE" value="false" id="153"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XVATDATE" id="154"/>
+      <elementValue elementRef="DECODE" value="false" id="155"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PST_PER_VAR" id="156"/>
+      <elementValue elementRef="DECODE" value="false" id="157"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="XBBSC" id="158"/>
+      <elementValue elementRef="DECODE" value="false" id="159"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="F_OBSOLETE" id="160"/>
+      <elementValue elementRef="DECODE" value="false" id="161"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FM_DERIVE_ACC" id="162"/>
+      <elementValue elementRef="DECODE" value="false" id="163"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="DESTINATION" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_HEADER_AS_IS" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="T001" name="tFileInputDelimited_1">
+      <column comment="クライアント" key="true" length="3" name="MANDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードまたは会社の名称" key="false" length="25" name="BUTXT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="市区町村" key="false" length="25" name="ORT01" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="国/地域コード" key="false" length="3" name="LAND1" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="通貨コード" key="false" length="5" name="WAERS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="言語キー" key="false" length="1" name="SPRAS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="勘定コード表" key="false" length="4" name="KTOPL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="換算レート誤差率上限(%)" key="false" length="2" name="WAABW" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
+      <column comment="会計年度バリアント" key="false" length="2" name="PERIV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="配分フラグ" key="false" length="1" name="KOKFI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社" key="false" length="6" name="RCOMP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="アドレス" key="false" length="10" name="ADRNR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="消費税登録番号" key="false" length="20" name="STCEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="財務管理領域" key="false" length="4" name="FIKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="区分: プロジェクト資金管理が活動中か" key="false" length="1" name="XFMCO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金予算管理有効" key="false" length="1" name="XFMCB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="予算管理の更新有効化" key="false" length="1" name="XFMCA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="税計算管轄コード - 税管轄コード" key="false" length="15" name="TXJCD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="HR 勘定への予算センタ割当可能開始" key="false" length="8" name="FMHRDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="会社コードはテンプレート" key="false" length="1" name="XTEMPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="輸送プラント" key="false" length="4" name="TRANSIT_PLANT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードバリアント (画面)" key="false" length="1" name="BUVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="資金管理と予測用会社コード" key="false" length="4" name="FDBUK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金管理有効化済" key="false" length="1" name="XFDIS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ:  起算日初期値提案" key="false" length="1" name="XVALV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 割引基準額は正味額" key="false" length="1" name="XSKFN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="与信管理領域" key="false" length="4" name="KKBER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 税の基準額は正味割引額" key="false" length="1" name="XMWSN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="勘定コードへのモデル勘定コードコピールール" key="false" length="4" name="MREGL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 事業領域別の財務諸表の作成要" key="false" length="1" name="XGSBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 会計年度提案" key="false" length="1" name="XGJRV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 換算差損益の換算転記" key="false" length="1" name="XKDFT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 本稼動会社コード" key="false" length="1" name="XPROD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 仕入勘定処理有効" key="false" length="1" name="XEINK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: JV 会計有効" key="false" length="1" name="XJVAA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 財務資産管理機能使用" key="false" length="1" name="XVVWA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 換算レート差損益なし (国内通貨決済時)" key="false" length="1" name="XSLTA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金管理/予測での MM 更新を有効化しますか?" key="false" length="1" name="XFDMM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ : 資金管理/予測での販売管理更新を有効化しますか?" key="false" length="1" name="XFDSD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 会社コードは別システムにあります" key="false" length="1" name="XEXTB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードのオリジナルキー" key="false" length="4" name="EBUKR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="代替勘定コード表" key="false" length="4" name="KTOP2" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="消費税グループ" key="false" length="4" name="UMKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="グローバル会社コード名" key="false" length="6" name="BUKRS_GLOB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="項目ステ－タスバリアント" key="false" length="4" name="FSTVA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会計期間バリアント" key="false" length="4" name="OPVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: ヘッジ依頼使用" key="false" length="1" name="XCOVR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="税明細の外貨換算" key="false" length="1" name="TXKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ワークフローバリアント" key="false" length="4" name="WFVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="在庫管理での G/L 勘定権限チェック" key="false" length="1" name="XBBBF" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="発注/分納契約の勘定コード権限確認" key="false" length="1" name="XBBBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="購買依頼の勘定コード権限チェック" key="false" length="1" name="XBBBA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="基本契約の勘定コード権限チェック" key="false" length="1" name="XBBKO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 税決定基準の伝票日付" key="false" length="1" name="XSTDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="非課税取引の仮払消費税コード" key="false" length="2" name="MWSKV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="非課税取引の仮受消費税コード" key="false" length="2" name="MWSKA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: MM 購買発注の輸入データ管理" key="false" length="1" name="IMPDA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="区分: マイナス転記可" key="false" length="1" name="XNEGP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 与信管理データの上書き可能" key="false" length="1" name="XKKBI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 拡張源泉徴収税の有効化" key="false" length="1" name="WT_NEWWT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="転記日付設定処理" key="false" length="1" name="PP_PDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="インフレーションメソッド" key="false" length="4" name="INFMT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="支出負担行為伺項目ステータスバリアント" key="false" length="4" name="FSTVARE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: 輸入データコピー管理 - GR" key="false" length="1" name="KOPIM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: 輸入データの画面制御 - MM 入庫" key="false" length="1" name="DKWEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="相手勘定コード設定方法" key="false" length="1" name="OFFSACCT" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
+      <column comment="事業領域財務諸表の追加設定バリアント" key="false" length="2" name="BAPOVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="売上原価計算ステータス" key="false" length="1" name="XCOS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ファクタリング有効" key="false" length="1" name="XCESSION" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="金額分割可能" key="false" length="1" name="XSPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Surcharge Calculation Method" key="false" length="1" name="SURCCM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Provisions for Taxes on Services Received" key="false" length="2" name="DTPROV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Journal Voucher (Amount Correction)" key="false" length="2" name="DTAMTC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Journal Voucher (Tax Code Correction)" key="false" length="2" name="DTTAXC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Remittance Challans" key="false" length="2" name="DTTDSP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="繰延税ルール" key="false" length="4" name="DTAXR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="伝票の税レポート日付有効" key="false" length="1" name="XVATDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コード/元帳の会計期間バリアント管理" key="false" length="1" name="PST_PER_VAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ショッピングカードの G/L 勘定権限チェック" key="false" length="1" name="XBBSC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="入力ヘルプのエントリ非表示" key="false" length="1" name="F_OBSOLETE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="予算管理での勘定割当誘導有効化" key="false" length="1" name="FM_DERIVE_ACC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="T001" name="REJECT">
+      <column comment="クライアント" key="true" length="3" name="MANDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードまたは会社の名称" key="false" length="25" name="BUTXT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="市区町村" key="false" length="25" name="ORT01" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="国/地域コード" key="false" length="3" name="LAND1" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="通貨コード" key="false" length="5" name="WAERS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="言語キー" key="false" length="1" name="SPRAS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="勘定コード表" key="false" length="4" name="KTOPL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="換算レート誤差率上限(%)" key="false" length="2" name="WAABW" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
+      <column comment="会計年度バリアント" key="false" length="2" name="PERIV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="配分フラグ" key="false" length="1" name="KOKFI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社" key="false" length="6" name="RCOMP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="アドレス" key="false" length="10" name="ADRNR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="消費税登録番号" key="false" length="20" name="STCEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="財務管理領域" key="false" length="4" name="FIKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="区分: プロジェクト資金管理が活動中か" key="false" length="1" name="XFMCO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金予算管理有効" key="false" length="1" name="XFMCB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="予算管理の更新有効化" key="false" length="1" name="XFMCA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="税計算管轄コード - 税管轄コード" key="false" length="15" name="TXJCD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="HR 勘定への予算センタ割当可能開始" key="false" length="8" name="FMHRDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="会社コードはテンプレート" key="false" length="1" name="XTEMPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="輸送プラント" key="false" length="4" name="TRANSIT_PLANT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードバリアント (画面)" key="false" length="1" name="BUVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="資金管理と予測用会社コード" key="false" length="4" name="FDBUK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金管理有効化済" key="false" length="1" name="XFDIS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ:  起算日初期値提案" key="false" length="1" name="XVALV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 割引基準額は正味額" key="false" length="1" name="XSKFN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="与信管理領域" key="false" length="4" name="KKBER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 税の基準額は正味割引額" key="false" length="1" name="XMWSN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="勘定コードへのモデル勘定コードコピールール" key="false" length="4" name="MREGL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 事業領域別の財務諸表の作成要" key="false" length="1" name="XGSBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 会計年度提案" key="false" length="1" name="XGJRV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 換算差損益の換算転記" key="false" length="1" name="XKDFT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 本稼動会社コード" key="false" length="1" name="XPROD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 仕入勘定処理有効" key="false" length="1" name="XEINK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: JV 会計有効" key="false" length="1" name="XJVAA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 財務資産管理機能使用" key="false" length="1" name="XVVWA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 換算レート差損益なし (国内通貨決済時)" key="false" length="1" name="XSLTA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 資金管理/予測での MM 更新を有効化しますか?" key="false" length="1" name="XFDMM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ : 資金管理/予測での販売管理更新を有効化しますか?" key="false" length="1" name="XFDSD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 会社コードは別システムにあります" key="false" length="1" name="XEXTB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コードのオリジナルキー" key="false" length="4" name="EBUKR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="代替勘定コード表" key="false" length="4" name="KTOP2" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="消費税グループ" key="false" length="4" name="UMKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="グローバル会社コード名" key="false" length="6" name="BUKRS_GLOB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="項目ステ－タスバリアント" key="false" length="4" name="FSTVA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会計期間バリアント" key="false" length="4" name="OPVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: ヘッジ依頼使用" key="false" length="1" name="XCOVR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="税明細の外貨換算" key="false" length="1" name="TXKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ワークフローバリアント" key="false" length="4" name="WFVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="在庫管理での G/L 勘定権限チェック" key="false" length="1" name="XBBBF" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="発注/分納契約の勘定コード権限確認" key="false" length="1" name="XBBBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="購買依頼の勘定コード権限チェック" key="false" length="1" name="XBBBA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="基本契約の勘定コード権限チェック" key="false" length="1" name="XBBKO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 税決定基準の伝票日付" key="false" length="1" name="XSTDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="非課税取引の仮払消費税コード" key="false" length="2" name="MWSKV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="非課税取引の仮受消費税コード" key="false" length="2" name="MWSKA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: MM 購買発注の輸入データ管理" key="false" length="1" name="IMPDA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="区分: マイナス転記可" key="false" length="1" name="XNEGP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 与信管理データの上書き可能" key="false" length="1" name="XKKBI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="フラグ: 拡張源泉徴収税の有効化" key="false" length="1" name="WT_NEWWT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="転記日付設定処理" key="false" length="1" name="PP_PDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="インフレーションメソッド" key="false" length="4" name="INFMT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="支出負担行為伺項目ステータスバリアント" key="false" length="4" name="FSTVARE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: 輸入データコピー管理 - GR" key="false" length="1" name="KOPIM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="貿易: 輸入データの画面制御 - MM 入庫" key="false" length="1" name="DKWEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="相手勘定コード設定方法" key="false" length="1" name="OFFSACCT" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
+      <column comment="事業領域財務諸表の追加設定バリアント" key="false" length="2" name="BAPOVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="売上原価計算ステータス" key="false" length="1" name="XCOS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ファクタリング有効" key="false" length="1" name="XCESSION" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="金額分割可能" key="false" length="1" name="XSPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Surcharge Calculation Method" key="false" length="1" name="SURCCM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Provisions for Taxes on Services Received" key="false" length="2" name="DTPROV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Journal Voucher (Amount Correction)" key="false" length="2" name="DTAMTC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Journal Voucher (Tax Code Correction)" key="false" length="2" name="DTTAXC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="Document Type for Remittance Challans" key="false" length="2" name="DTTDSP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="繰延税ルール" key="false" length="4" name="DTAXR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="伝票の税レポート日付有効" key="false" length="1" name="XVATDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="会社コード/元帳の会計期間バリアント管理" key="false" length="1" name="PST_PER_VAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="ショッピングカードの G/L 勘定権限チェック" key="false" length="1" name="XBBSC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="入力ヘルプのエントリ非表示" key="false" length="1" name="F_OBSOLETE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="予算管理での勘定割当誘導有効化" key="false" length="1" name="FM_DERIVE_ACC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="440" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_qbJjgN4TEe-afe7zbKpf4Q-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="T001" name="aaa">
+      <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="aaa">
+        <mapperTableEntries name="BUKRS" expression="row2.BUKRS " type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="MANDT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BUKRS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BUTXT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ORT01" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LAND1" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WAERS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SPRAS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="KTOPL" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WAABW" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="PERIV" type="id_String" nullable="true"/>
+        <mapperTableEntries name="KOKFI" type="id_String" nullable="true"/>
+        <mapperTableEntries name="RCOMP" type="id_String" nullable="true"/>
+        <mapperTableEntries name="ADRNR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="STCEG" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FIKRS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFMCO" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFMCB" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFMCA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TXJCD" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FMHRDATE" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="XTEMPLT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TRANSIT_PLANT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BUVAR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FDBUK" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFDIS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XVALV" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XSKFN" type="id_String" nullable="true"/>
+        <mapperTableEntries name="KKBER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XMWSN" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MREGL" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XGSBE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XGJRV" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XKDFT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XPROD" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XEINK" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XJVAA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XVVWA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XSLTA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFDMM" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XFDSD" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XEXTB" type="id_String" nullable="true"/>
+        <mapperTableEntries name="EBUKR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="KTOP2" type="id_String" nullable="true"/>
+        <mapperTableEntries name="UMKRS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="BUKRS_GLOB" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FSTVA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="OPVAR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XCOVR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="TXKRS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WFVAR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XBBBF" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XBBBE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XBBBA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XBBKO" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XSTDT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MWSKV" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MWSKA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="IMPDA" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XNEGP" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XKKBI" type="id_String" nullable="true"/>
+        <mapperTableEntries name="WT_NEWWT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PP_PDATE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="INFMT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FSTVARE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="KOPIM" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DKWEG" type="id_String" nullable="true"/>
+        <mapperTableEntries name="OFFSACCT" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="BAPOVAR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XCOS" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XCESSION" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XSPLT" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SURCCM" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DTPROV" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DTAMTC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DTTAXC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DTTDSP" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DTAXR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XVATDATE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="PST_PER_VAR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="XBBSC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="F_OBSOLETE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="FM_DERIVE_ACC" type="id_String" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="840" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileOutputDelimited_2" show="false"/>
+    <elementParameter field="CHECK" name="USESTREAM" value="false"/>
+    <elementParameter field="TEXT" name="STREAMNAME" value="outputStream" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Talend/Talend-Studio-20240527_1700-V8.0.1/workspace/PoC6/out2.csv&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" value="true" show="false"/>
+    <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CHECK" name="INCLUDEHEADER" value="true"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" value="&quot;&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="SPLIT" value="false"/>
+    <elementParameter field="TEXT" name="SPLIT_EVERY" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" value="1" show="false"/>
+    <elementParameter field="CHECK" name="ROW_MODE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="DELETE_EMPTYFILE" value="false"/>
+    <elementParameter field="CHECK" name="FILE_EXIST_EXCEPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="T001" name="tFileOutputDelimited_2">
+      <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tSAPTableInput_1" offsetLabelX="0" offsetLabelY="0" source="tSAPTableInput_1" target="tFileOutputDelimited_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSAPTableInput_1" offsetLabelX="0" offsetLabelY="0" source="tSAPTableInput_1" target="tFileInputDelimited_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="aaa" lineStyle="0" metaname="aaa" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_2">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="BUTXT" id="0"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="1"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="2"/>
+      <elementValue elementRef="TRACE_COLUMN" value="BUKRS" id="3"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="4"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="5"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="aaa" show="false"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSAPTableInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="0;0;0" show="false"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
