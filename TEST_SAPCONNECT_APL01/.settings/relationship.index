@@ -13,4 +13,15 @@
     "version" : "Latest",
     "type" : "schema"
   } ]
+}, {
+  "baseItem" : {
+    "id" : "_sSbP8N6cEe-afe7zbKpf4Q",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "TEST_SAPCONNECT_APL01:_qbJjgN4TEe-afe7zbKpf4Q",
+    "version" : "Latest",
+    "type" : "job"
+  } ]
 } ]
