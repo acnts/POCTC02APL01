@@ -1,5 +1,20 @@
 [ {
   "baseItem" : {
+    "id" : "_JmywAN7sEe-Ck_gDUai5QA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_KKV5IN4UEe-afe7zbKpf4Q",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_KKV5IN4UEe-afe7zbKpf4Q - T001",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_qbJjgN4TEe-afe7zbKpf4Q",
     "version" : "0.1",
     "type" : "job"
@@ -20,7 +35,7 @@
     "type" : "job"
   },
   "relatedItems" : [ {
-    "id" : "TEST_SAPCONNECT_APL01:_qbJjgN4TEe-afe7zbKpf4Q",
+    "id" : "TEST_SAPCONNECT_APL01:_JmywAN7sEe-Ck_gDUai5QA",
     "version" : "Latest",
     "type" : "job"
   } ]
