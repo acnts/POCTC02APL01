@@ -166,100 +166,35 @@
     <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="T001" name="aaa">
-      <column comment="市区町村" key="false" length="25" name="ORT01" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="DWOSメール種別" key="true" length="1" name="MAIL_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="aaa">
-        <mapperTableEntries name="ORT01" expression="row1.ORT01 " type="id_String" nullable="true"/>
+        <mapperTableEntries name="MAIL_TYPE" expression="row1.MAIL_TYPE " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="kaisya" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="MANDT" expression="" type="id_String" nullable="true"/>
-        <mapperTableEntries name="BUKRS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="BUTXT" expression="row2.kaisya " type="id_String" nullable="true" operator="="/>
-        <mapperTableEntries name="ORT01" type="id_String" nullable="true"/>
-        <mapperTableEntries name="LAND1" type="id_String" nullable="true"/>
-        <mapperTableEntries name="WAERS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SPRAS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KTOPL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="WAABW" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="PERIV" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KOKFI" type="id_String" nullable="true"/>
-        <mapperTableEntries name="RCOMP" type="id_String" nullable="true"/>
-        <mapperTableEntries name="ADRNR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="STCEG" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FIKRS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFMCO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFMCB" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFMCA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="TXJCD" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FMHRDATE" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="XTEMPLT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="TRANSIT_PLANT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="BUVAR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FDBUK" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFDIS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XVALV" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XSKFN" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KKBER" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XMWSN" type="id_String" nullable="true"/>
-        <mapperTableEntries name="MREGL" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XGSBE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XGJRV" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XKDFT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XPROD" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XEINK" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XJVAA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XVVWA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XSLTA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFDMM" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XFDSD" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XEXTB" type="id_String" nullable="true"/>
-        <mapperTableEntries name="EBUKR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KTOP2" type="id_String" nullable="true"/>
-        <mapperTableEntries name="UMKRS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="BUKRS_GLOB" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FSTVA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="OPVAR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XCOVR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="TXKRS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="WFVAR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XBBBF" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XBBBE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XBBBA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XBBKO" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XSTDT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="MWSKV" type="id_String" nullable="true"/>
-        <mapperTableEntries name="MWSKA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="IMPDA" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XNEGP" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XKKBI" type="id_String" nullable="true"/>
-        <mapperTableEntries name="WT_NEWWT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="PP_PDATE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="INFMT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FSTVARE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="KOPIM" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DKWEG" type="id_String" nullable="true"/>
-        <mapperTableEntries name="OFFSACCT" type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="BAPOVAR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XCOS" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XCESSION" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XSPLT" type="id_String" nullable="true"/>
-        <mapperTableEntries name="SURCCM" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DTPROV" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DTAMTC" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DTTAXC" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DTTDSP" type="id_String" nullable="true"/>
-        <mapperTableEntries name="DTAXR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XVATDATE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="PST_PER_VAR" type="id_String" nullable="true"/>
-        <mapperTableEntries name="XBBSC" type="id_String" nullable="true"/>
-        <mapperTableEntries name="F_OBSOLETE" type="id_String" nullable="true"/>
-        <mapperTableEntries name="FM_DERIVE_ACC" type="id_String" nullable="true"/>
+        <mapperTableEntries name="VKORG" expression="row2.kaisya " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="CUSTOMER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MAIL_TYPE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MESSAGE_TYPE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="MAILAADR" type="id_String" nullable="true"/>
+        <mapperTableEntries name="SO_OBJ_DES" type="id_String" nullable="true"/>
+        <mapperTableEntries name="LINE" type="id_String" nullable="true"/>
+        <mapperTableEntries name="DEL_FLG" type="id_String" nullable="true"/>
+        <mapperTableEntries name="C_DATE" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="C_TIME" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="C_USER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="C_PGM" type="id_String" nullable="true"/>
+        <mapperTableEntries name="U_DATE" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="U_TIME" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="U_USER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="U_PGM" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
   </node>
@@ -294,11 +229,11 @@
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="90" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="T001" name="tFileOutputDelimited_2">
-      <column comment="市区町村" key="false" length="25" name="ORT01" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="DWOSメール種別" key="true" length="1" name="MAIL_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSAPTableInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSAPTableInput_1" show="false"/>
+  <node componentName="tSAPTableInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tSAPTableInput_2" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_KKV5IN4UEe-afe7zbKpf4Q" show="false"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -306,25 +241,25 @@
     <elementParameter field="CLOSED_LIST" name="SERVERTYPE" value="ApplicationServer"/>
     <elementParameter field="TEXT" name="CLIENT" value="&quot;250&quot;"/>
     <elementParameter field="TEXT" name="USERID" value="&quot;TALENDUSER&quot;"/>
-    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:1fj+h6VF3fARhogKZ8ns4ymH5KIWIFIDgYiADET8O29QdWlLPre9ROsv"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:i7wItD4JpVjE7bOZN7ZL67v/xRGCv17Pc9cFLj2I2nEM/mJAIT79fO3r"/>
     <elementParameter field="TEXT" name="LANGUAGE" value="&quot;JA&quot;"/>
     <elementParameter field="TEXT" name="HOSTNAME" value="&quot;R01VM2QS11&quot;"/>
     <elementParameter field="TEXT" name="SYSTEMNUMBER" value="&quot;00&quot;"/>
     <elementParameter field="TEXT" name="SYSTEMID" value="&quot;PRD&quot;" show="false"/>
     <elementParameter field="TEXT" name="GROUPNAME" value="&quot;tGroup&quot;" show="false"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_KKV5IN4UEe-afe7zbKpf4Q - T001" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_KKV5IN4UEe-afe7zbKpf4Q - ZSDT0004" show="false"/>
     <elementParameter field="TEXT" name="RFC_SERVER_URL" value="&quot;http://localhost:8080&quot;" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_ID" value="&quot;default&quot;" show="false"/>
     <elementParameter field="TEXT" name="PACKAGE_SIZE" value="10000" show="false"/>
     <elementParameter field="TEXT" name="THREAD_COUNT" value="2" show="false"/>
     <elementParameter field="TEXT" name="TOPIC_PARTITION_COUNT" value="2" show="false"/>
     <elementParameter field="TEXT" name="MAX_TIME_TO_WAIT" value="60" show="false"/>
-    <elementParameter field="TEXT" name="TABLE" value="&quot;T001&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;ZSDT0004&quot;"/>
     <elementParameter field="CHECK" name="CDS_VIEWS" value="false"/>
     <elementParameter field="TABLE" name="CDS_VIEW_PARAMETERS" show="false"/>
     <elementParameter field="TEXT" name="FROM_STATEMENT" value="&quot;&quot;" show="false"/>
-    <elementParameter field="TEXT" name="FILTER" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FILTER" value="&quot;MANDT == '1000' &quot;"/>
     <elementParameter field="CHECK" name="USE_EXISTING_DYNAMIC" value="false" show="false"/>
     <elementParameter field="COMPONENT_LIST" name="DYNAMIC" value="" show="false"/>
     <elementParameter field="TEXT" name="START_ROW" value="-1"/>
@@ -338,7 +273,7 @@
     <elementParameter field="TEXT" name="FTP_HOST" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="FTP_PORT" value="21" show="false"/>
     <elementParameter field="TEXT" name="FTP_USER" value="&quot;&quot;" show="false"/>
-    <elementParameter field="PASSWORD" name="FTP_PASS" value="enc:system.encryption.key.v1:E3Q6C4UDs1yN3zK32VMSqUFrPqizNXeJD/kDw5SC" show="false"/>
+    <elementParameter field="PASSWORD" name="FTP_PASS" value="enc:system.encryption.key.v1:n3ieRpQoLqKILJGlpf5fFgOHkBEnhhD2S3FYW9/t" show="false"/>
     <elementParameter field="CHECK" name="USE_SERVER_LOGICAL_PATH" value="false" show="false"/>
     <elementParameter field="TEXT" name="FTP_DIR" value="&quot;/usr/sap/talend/ftp/&quot;" show="false"/>
     <elementParameter field="TEXT" name="GENERATED_FILENAME_PREFIX" value="&quot;current_data_file&quot;" show="false"/>
@@ -361,91 +296,26 @@
     <elementParameter field="TEXT" name="REMOTE_DIR" value="&quot;&quot;" show="false"/>
     <elementParameter field="CHECK" name="REPLACE_CONTROL_CHARACTERS" value="true" show="false"/>
     <elementParameter field="CHECK" name="FETCH_ALL_AT_ONCE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="LABEL" value="T001"/>
+    <elementParameter field="TEXT" name="LABEL" value="ZSDT0004"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="T001" name="tSAPTableInput_1">
+    <metadata connector="FLOW" label="ZSDT0004" name="tSAPTableInput_2">
       <column comment="クライアント" key="true" length="3" name="MANDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社コード" key="true" length="4" name="BUKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社コードまたは会社の名称" key="false" length="25" name="BUTXT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="市区町村" key="false" length="25" name="ORT01" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="国/地域コード" key="false" length="3" name="LAND1" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="通貨コード" key="false" length="5" name="WAERS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="言語キー" key="false" length="1" name="SPRAS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="勘定コード表" key="false" length="4" name="KTOPL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="換算レート誤差率上限(%)" key="false" length="2" name="WAABW" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
-      <column comment="会計年度バリアント" key="false" length="2" name="PERIV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="配分フラグ" key="false" length="1" name="KOKFI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社" key="false" length="6" name="RCOMP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="アドレス" key="false" length="10" name="ADRNR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="消費税登録番号" key="false" length="20" name="STCEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="財務管理領域" key="false" length="4" name="FIKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="区分: プロジェクト資金管理が活動中か" key="false" length="1" name="XFMCO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 資金予算管理有効" key="false" length="1" name="XFMCB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="予算管理の更新有効化" key="false" length="1" name="XFMCA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="税計算管轄コード - 税管轄コード" key="false" length="15" name="TXJCD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="HR 勘定への予算センタ割当可能開始" key="false" length="8" name="FMHRDATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
-      <column comment="会社コードはテンプレート" key="false" length="1" name="XTEMPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="輸送プラント" key="false" length="4" name="TRANSIT_PLANT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社コードバリアント (画面)" key="false" length="1" name="BUVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="資金管理と予測用会社コード" key="false" length="4" name="FDBUK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 資金管理有効化済" key="false" length="1" name="XFDIS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ:  起算日初期値提案" key="false" length="1" name="XVALV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 割引基準額は正味額" key="false" length="1" name="XSKFN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="与信管理領域" key="false" length="4" name="KKBER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 税の基準額は正味割引額" key="false" length="1" name="XMWSN" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="勘定コードへのモデル勘定コードコピールール" key="false" length="4" name="MREGL" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 事業領域別の財務諸表の作成要" key="false" length="1" name="XGSBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 会計年度提案" key="false" length="1" name="XGJRV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 換算差損益の換算転記" key="false" length="1" name="XKDFT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 本稼動会社コード" key="false" length="1" name="XPROD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 仕入勘定処理有効" key="false" length="1" name="XEINK" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: JV 会計有効" key="false" length="1" name="XJVAA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 財務資産管理機能使用" key="false" length="1" name="XVVWA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 換算レート差損益なし (国内通貨決済時)" key="false" length="1" name="XSLTA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 資金管理/予測での MM 更新を有効化しますか?" key="false" length="1" name="XFDMM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ : 資金管理/予測での販売管理更新を有効化しますか?" key="false" length="1" name="XFDSD" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 会社コードは別システムにあります" key="false" length="1" name="XEXTB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社コードのオリジナルキー" key="false" length="4" name="EBUKR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="代替勘定コード表" key="false" length="4" name="KTOP2" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="消費税グループ" key="false" length="4" name="UMKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="グローバル会社コード名" key="false" length="6" name="BUKRS_GLOB" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="項目ステ－タスバリアント" key="false" length="4" name="FSTVA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会計期間バリアント" key="false" length="4" name="OPVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: ヘッジ依頼使用" key="false" length="1" name="XCOVR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="税明細の外貨換算" key="false" length="1" name="TXKRS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="ワークフローバリアント" key="false" length="4" name="WFVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="在庫管理での G/L 勘定権限チェック" key="false" length="1" name="XBBBF" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="発注/分納契約の勘定コード権限確認" key="false" length="1" name="XBBBE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="購買依頼の勘定コード権限チェック" key="false" length="1" name="XBBBA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="基本契約の勘定コード権限チェック" key="false" length="1" name="XBBKO" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 税決定基準の伝票日付" key="false" length="1" name="XSTDT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="非課税取引の仮払消費税コード" key="false" length="2" name="MWSKV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="非課税取引の仮受消費税コード" key="false" length="2" name="MWSKA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="貿易: MM 購買発注の輸入データ管理" key="false" length="1" name="IMPDA" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="区分: マイナス転記可" key="false" length="1" name="XNEGP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 与信管理データの上書き可能" key="false" length="1" name="XKKBI" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="フラグ: 拡張源泉徴収税の有効化" key="false" length="1" name="WT_NEWWT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="転記日付設定処理" key="false" length="1" name="PP_PDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="インフレーションメソッド" key="false" length="4" name="INFMT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="支出負担行為伺項目ステータスバリアント" key="false" length="4" name="FSTVARE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="貿易: 輸入データコピー管理 - GR" key="false" length="1" name="KOPIM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="貿易: 輸入データの画面制御 - MM 入庫" key="false" length="1" name="DKWEG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="相手勘定コード設定方法" key="false" length="1" name="OFFSACCT" nullable="true" pattern="" precision="0" sourceType="INTEGER" type="id_Integer" usefulColumn="true"/>
-      <column comment="事業領域財務諸表の追加設定バリアント" key="false" length="2" name="BAPOVAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="売上原価計算ステータス" key="false" length="1" name="XCOS" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="ファクタリング有効" key="false" length="1" name="XCESSION" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="金額分割可能" key="false" length="1" name="XSPLT" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="Surcharge Calculation Method" key="false" length="1" name="SURCCM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="Document Type for Provisions for Taxes on Services Received" key="false" length="2" name="DTPROV" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="Document Type for Journal Voucher (Amount Correction)" key="false" length="2" name="DTAMTC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="Document Type for Journal Voucher (Tax Code Correction)" key="false" length="2" name="DTTAXC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="Document Type for Remittance Challans" key="false" length="2" name="DTTDSP" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="繰延税ルール" key="false" length="4" name="DTAXR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="伝票の税レポート日付有効" key="false" length="1" name="XVATDATE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="会社コード/元帳の会計期間バリアント管理" key="false" length="1" name="PST_PER_VAR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="ショッピングカードの G/L 勘定権限チェック" key="false" length="1" name="XBBSC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="入力ヘルプのエントリ非表示" key="false" length="1" name="F_OBSOLETE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
-      <column comment="予算管理での勘定割当誘導有効化" key="false" length="1" name="FM_DERIVE_ACC" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="販売組織" key="true" length="4" name="VKORG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="得意先ポータル上の得意先ID" key="true" length="10" name="CUSTOMER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="DWOSメール種別" key="true" length="1" name="MAIL_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="DWOSメッセージタイプ" key="true" length="1" name="MESSAGE_TYPE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="電子メールアドレス" key="false" length="241" name="MAILAADR" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="内容説明" key="false" length="50" name="SO_OBJ_DES" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="テキスト項目長 255: テキスト" key="false" length="255" name="LINE" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="削除フラグ" key="false" length="1" name="DEL_FLG" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="登録日付" key="false" length="8" name="C_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="登録時刻" key="false" length="6" name="C_TIME" nullable="true" pattern="&quot;HH:mm:ss&quot;" precision="0" sourceType="TIME" type="id_Date" usefulColumn="true"/>
+      <column comment="登録者" key="false" length="12" name="C_USER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="登録PGM" key="false" length="40" name="C_PGM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="更新日付" key="false" length="8" name="U_DATE" nullable="true" pattern="&quot;yyyy-MM-dd&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column comment="更新時刻" key="false" length="6" name="U_TIME" nullable="true" pattern="&quot;HH:mm:ss&quot;" precision="0" sourceType="TIME" type="id_Date" usefulColumn="true"/>
+      <column comment="更新者" key="false" length="12" name="U_USER" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="更新PGM" key="false" length="40" name="U_PGM" nullable="true" pattern="" precision="0" sourceType="STRING" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
@@ -471,11 +341,14 @@
       <elementValue elementRef="TRACE_COLUMN" value="ORT01" id="9"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="10"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="11"/>
+      <elementValue elementRef="TRACE_COLUMN" value="MAIL_TYPE" id="12"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true" id="13"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value="" id="14"/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="aaa" show="false"/>
   </connection>
-  <connection connectorName="FLOW" label="row1" lineStyle="8" metaname="tSAPTableInput_1" offsetLabelX="0" offsetLabelY="0" source="tSAPTableInput_1" target="tMap_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="8" metaname="tSAPTableInput_2" offsetLabelX="0" offsetLabelY="0" source="tSAPTableInput_2" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
   </connection>

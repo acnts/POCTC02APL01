@@ -1,5 +1,20 @@
 [ {
   "baseItem" : {
+    "id" : "_DYG80OOlEe-QltroKd6-Pw",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_KKV5IN4UEe-afe7zbKpf4Q",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_KKV5IN4UEe-afe7zbKpf4Q - ZSDT0004",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+}, {
+  "baseItem" : {
     "id" : "_JmywAN7sEe-Ck_gDUai5QA",
     "version" : "0.1",
     "type" : "job"
@@ -24,7 +39,7 @@
     "version" : "Latest",
     "type" : "property"
   }, {
-    "id" : "_KKV5IN4UEe-afe7zbKpf4Q - T001",
+    "id" : "_KKV5IN4UEe-afe7zbKpf4Q - ZSDT0004",
     "version" : "Latest",
     "type" : "schema"
   } ]
